@@ -30,23 +30,20 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 1px);/*Calcolo l'altezza minima del body per evitare che la barra di scorrimento
+    height: calc(100vh - 1px);/*Calcolo l'altezza minima del body per evitare che la barra di scorrimento
     riduca lo spazio disponibile per il contenuto della pagina*/
     margin: 1.25rem;
-    text-align: center;
+    
 }
 
 /* Imposto lo stile del contenitore principale */
 .container{
     background-color: var(--white);
     padding: 1rem;
-    max-width: 400%;
-    width: 80%;
     border-radius: 0.825rem;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.05);
     margin-bottom: 2rem;
-    margin-top: -1.2rem;
-    height: calc(70vh - 1px);
+
 }
 
 /* Imposto lo stile delle immagini all'interno del contenitore */
