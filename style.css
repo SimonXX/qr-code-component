@@ -1,23 +1,27 @@
+/* Importo il font dalla Google Font API */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
+/* Imposto lo stile di default per tutto il documento */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Definisco le variabili utilizzate per i colori */
 :root{
-
     --white: hsl(0, 0%, 100%);
     --light-gray: hsl(212, 45%, 89%);
     --grayish-blue: hsl(220, 15%, 55%);
     --dark-blue: hsl(218, 44%, 22%);
 }
 
+/* Imposto uno stile di base per le immagini */
 img{
     max-width: 100%;
 }
 
+/* Imposto lo stile di base per il body */
 body{
     font-family: "Outfit", sans-serif;
     font-size: 15px;
@@ -26,11 +30,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 1px);/*Quando si utilizza solo height: 100vh su dispositivi con una barra di scorrimento (scrollbar), 
-    la barra di scorrimento occupa una porzione dell'altezza del viewport e riduce lo spazio disponibile per il contenuto della pagina*/
+    min-height: calc(100vh - 1px);/*Calcolo l'altezza minima del body per evitare che la barra di scorrimento
+    riduca lo spazio disponibile per il contenuto della pagina*/
     margin: 1.25rem;
 }
 
+/* Imposto lo stile del contenitore principale */
 .container{
     background-color: var(--white);
     padding: 1rem;
@@ -39,16 +44,17 @@ body{
     border-radius: 0.825rem;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.05);
     margin-bottom: 2rem;
-    margin-top: -1rem;
+    margin-top: -1.2rem;
     height: calc(70vh - 1px);
-    
 }
 
+/* Imposto lo stile delle immagini all'interno del contenitore */
 .container img{
     border-radius: 0.825rem;
     margin-bottom: 1.4rem;
 }
 
+/* Imposto lo stile del titolo all'interno del contenitore */
 .container h1{
     color:var(--dark-blue);
     text-align: center;
@@ -56,21 +62,36 @@ body{
     font-size: 25px;
 }
 
+/* Imposto lo stile del testo all'interno del contenitore */
 .container p{
     color: var(--grayish-blue);
     text-align: center;
     margin-bottom: 1rem;
-    
     max-width: 250px;
     margin: 0 auto;
     line-height: 1.2;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* Imposto lo stile per l'attribuzione dell'immagine */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
 
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Imposto lo stile per schermi di larghezza maggiore di 500px */
 @media (min-width: 500px) {
     .container {
-      width: 350px;
+        width: 320px;
+    }
+}
+
+/* Imposto lo stile per schermi di altezza maggiore di 500px */
+@media (min-height: 500px) {
+    .container {
+        height: 500px;
     }
 }
